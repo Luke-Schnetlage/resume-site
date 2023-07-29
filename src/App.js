@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-
+require("typeface-inter");
 
 //this is the start, right here
 
-export function Navbar() {
+function Navbar() {
   return (
     <div className="navBar">
       <header className="nav-header">
@@ -19,11 +18,31 @@ export function Navbar() {
   );
 }
 
-export function HomePage(){
+function Title(){
   return (
-    <div className="homePage">
-      <p>homepage</p>
-    </div>
+    <>
+      <div className = "head-text">
+        <div className = "head-image">
+          <img src = {require ('./assets/code.png')} alt = "javascript code" />
+        </div>
+          <div class='text-on-image' >
+             <h1> Luke Schnetlage </h1>
+             <p> Software developer</p>
+          </div>
+      </div>
+    </>
+    
+  );
+}
+
+
+export default function HomePage(){
+  return (
+    <>
+    <Navbar sticky="top" />
+    <Title />
+    
+    </>
   );
 }
 
